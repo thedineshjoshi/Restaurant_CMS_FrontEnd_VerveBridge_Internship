@@ -1,0 +1,201 @@
+.dashboard {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; Ensure space at the bottom if needed */
+  }
+  
+  .sidebar-brand {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-nav ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar-nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar-nav ul li a:hover {
+    background-color: #575757;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Ensure scrolling if content overflows */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    margin-bottom: 0;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  /* User Profile Section */
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: auto;
+    border: 2px solid #3498db; /* Border color */
+    background-color: #fff; /* Background color */
+  }
+  
+  .dropdown {
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333; /* Button color */
+  }
+  
+  /* Dropdown Menu Styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Content Card Styles */
+  .content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure cards wrap in smaller screens */
+  }
+  
+  .card {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust width of cards */
+    min-width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 24px;
+    color: #666;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .main-content {
+      padding: 20px;
+    }
+  
+    .card {
+      flex: 1 1 calc(50% - 20px); /* Adjust for tablet screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+  
+    .main-content {
+      padding: 10px;
+    }
+  
+    .content {
+      flex-direction: column;
+    }
+  
+    .card {
+      flex: 1 1 100%; /* Full width on mobile */
+    }
+  }
