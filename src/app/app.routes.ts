@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
-import { AboutUsComponent } from './components/about-us/about-us.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { LoginComponent } from './components/login/login.component';
-import { ReservationsComponent } from './components/reservations/reservations.component';
-import { TeamComponent } from './components/team/team.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
 import { AuthguardService } from './services/authguard.service';
+import { LoginComponent } from './components/login/login.component';
+import { AboutUsComponent } from './components/dashboard/about-us/about-us.component';
+import { MenuComponent } from './components/dashboard/menu/menu.component';
+import { ReservationsComponent } from './components/dashboard/reservations/reservations.component';
+import { TeamComponent } from './components/dashboard/team/team.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
